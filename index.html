@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Dynamic Portfolio</title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+    <img src="media/profile.png" alt="SXNTOS Profile" id="profile-img" />
+    <h1 id="intro-text">Hello, I'm Jibuaku Somtochukwu Derick!</h1>
+    <p>Passionate about web development and creating engaging experiences.</p>
+</header>
+
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I enjoy learning new technologies and bringing my ideas to life through code. <br />
+                My focus is on building user-friendly and responsive web applications.
+            </p>
+        </section>
+
+        <section id="multimedia-showcase">
+            <h2>Multimedia Showcase</h2>
+            <h3>My Audio Greeting:</h3>
+            <audio controls>
+                <source src="media/audio.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+            </audio>
+            <h3>A Quick Project Video:</h3>
+            <video controls width="320" height="240">
+                <source src="media/video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <video controls width="320" height="240">
+                <source src="media/video2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section id="interactive-skills">
+            <h2>My Skills</h2>
+            <div class="skill-cards">
+                <div class="skill-card skill-btn" data-skill="HTML">
+                    <div class="card-front">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                    <div class="card-back">
+                        Markup language for structuring content.
+                    </div>
+                </div>
+                <div class="skill-card skill-btn" data-skill="CSS">
+                    <div class="card-front">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                    <div class="card-back">
+                        Styles the layout and appearance of web content.
+                    </div>
+                </div>
+                <div class="skill-card skill-btn" data-skill="JavaScript">
+                    <div class="card-front">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="card-back">
+                        Brings interactivity and logic to websites.
+                    </div>
+                </div>
+            </div>
+
+            <p id="skill-description" style="margin-top: 15px; font-style: italic; color: #0056b3;">Click a Skill to learn more </p>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects-container">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="current-year">2025</span> SXNTOS. All Rights Reserved.
+        </p>
+        <button id="themeToggle">Toggle Dark Mode</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+/* Base styling and font */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5; /* very light gray */
+    color: #111; /* very dark gray text */
+    line-height: 1.6;
+    padding-bottom: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #111; /* very dark background */
+    color: #eee; /* light gray text */
+}
+
+/* Header and footer */
+header, footer {
+    background-color: #222; /* dark gray background */
+    color: #f5f5f5; /* light text */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: none; /* no bright shadow */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #000; /* pure black */
+    color: #ccc; /* softer light gray text */
+}
+
+/* Profile image in header */
+header img {
+    border-radius: 50%;
+    border: 4px solid #f5f5f5; /* light border */
+    margin-bottom: 10px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Main container */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Sections */
+section {
+    background-color: #fff; /* white for sections */
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode section {
+    background-color: #222; /* dark gray sections */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #111;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #eee;
+}
+
+/* Skill cards container */
+.skill-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    perspective: 1000px;
+}
+
+/* Skill card */
+.skill-card {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #fff;
+    color: #111;
+}
+
+.skill-card:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-front {
+    background-color: #fff;
+    color: #111;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+}
+
+.card-front i {
+    font-size: 4rem;
+}
+
+.card-back {
+    background-color: #eee;
+    color: #111;
+    transform: rotateY(180deg);
+    font-weight: normal;
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+body.dark-mode .skill-card {
+    background-color: #222;
+    color: #eee;
+    box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .card-front {
+    background-color: #222;
+    border-color: #444;
+    color: #eee;
+}
+
+body.dark-mode .card-back {
+    background-color: #333;
+    color: #ccc;
+    border-color: #444;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: none;
+}
+
+/* Theme toggle button */
+#themeToggle {
+    background-color: transparent;
+    color: inherit;
+    padding: 8px 15px;
+    border: 2px solid currentColor;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#themeToggle:hover {
+    background-color: currentColor;
+    color: red outline;
+}
+
+/* Projects container grid */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Project cards */
+.project-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    color: #111;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .project-card {
+    background-color: #222;
+    border-color: #444;
+    color: #eee;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Tech icons */
+.tech-icons {
+    margin-bottom: 15px;
+}
+
+.tech-icons i {
+    font-size: 1.5rem;
+    color: #111;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .tech-icons i {
+    color: #ccc;
+}
+
+/* Project links */
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.project-links a {
+    font-size: 1.4rem;
+    color: #111;
+    transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+    color: #555;
+}
+
+body.dark-mode .project-links a {
+    color: #ccc;
+}
+
+body.dark-mode .project-links a:hover {
+    color: #eee;
+}
+
+/* Responsive improvements */
+@media (max-width: 600px) {
+    .skill-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Fall-in animation for intro text */
+@keyframes fallIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#intro-text {
+    animation: fallIn 1s ease-out forwards;
+}
+
+#intro-text{
+    color: antiquewhite;
+}
+/* Updated skill description color (fits B&W theme better) */
+#skill-description {
+    color: #555 !important;
+}

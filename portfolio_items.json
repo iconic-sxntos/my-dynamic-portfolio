@@ -1,0 +1,23 @@
+[
+  {
+    "name": "My First HTML Page",
+    "description": "A simple static page demonstrating basic HTML structure and elements.",
+    "tech": ["HTML"],
+    "github": "https://github.com/SXNTOS/html-page",
+    "demo": "https://sxntos.github.io/html-page"
+  },
+  {
+    "name": "CSS Styling Practice",
+    "description": "Explored various CSS properties to style text, colors, and layout.",
+    "tech": ["CSS"],
+    "github": "https://github.com/SXNTOS/css-practice",
+    "demo": "https://sxntos.github.io/css-practice"
+  },
+  {
+    "name": "Interactive JavaScript Fun",
+    "description": "Implemented basic JavaScript to add dynamic behavior and user interaction.",
+    "tech": ["JavaScript"],
+    "github": "https://github.com/SXNTOS/js-fun",
+    "demo": "https://sxntos.github.io/js-fun"
+  }
+]
